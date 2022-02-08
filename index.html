@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <h1 class="title">Spli <br> tter</h1>
   <div class="container">
-    <div class="calculate"> 
+    <div class="calculate">
       <form class="bill">
         <label for="">Bill</label>
-        <input class="input-bill"type="text">
+        <input id="input-bill" class="input-bill" type="text">
       </form>
       <form class="select-tip">
         <label for="">Select Tip %</label>
         <div class="opction">
-          <input type="submit" value="5%">
-          <input type="submit" value="10%">
-          <input type="submit" value="15%">
-          <input type="submit" value="25%">
-          <input type="submit" value="50%">
-          <input class="custom" type="text">
-          </div>
+          <button type="button" class="btn"id="5" onclick="setTipPercent(this)">5%</button>
+          <button type="button"class="btn"id="10" onclick="setTipPercent(this)">10%</button>
+          <button type="button" class="btn"id="15" onclick="setTipPercent(this)">15%</button>
+          <button type="button"class="btn"id="25" onclick="setTipPercent(this)">25%</button>
+          <button type="button"class="btn"id="50" onclick="setTipPercent(this)">50%</button>
+          <input type="number"id="custom" class="custom btn" onclick="setTipPercent(this)"type="text">
+        </div>
       </form>
       <form class="number-people">
-        <label >Number of People</label>
-        <input class="input-number" type="text">
+        <label>Number of People</label>
+        <input id="input-number" class="input-number" type="text">
       </form>
     </div>
-    <div class="result"> 
+    <div class="result">
       <div class="tip item-result">
         Tip Amount
         <br>/ person
-        <p class="tip-value">$0.00</p>
-      </div> 
+        <p id="tip-value" class="tip-value">$0.00</p>
+      </div>
       <div class="total item-result">
         Total
         <br>/ person
-        <p class="total-value">$0.00</p>
+        <p id="total-value" class="total-value">$0.00</p>
       </div>
-      <button class="reset ">
+      <button type="button" onclick="reset()"id="btn-reset" class="reset ">
         Reset
       </button>
     </div>
   </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Magdalena Cisek</a>.
   </div>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
